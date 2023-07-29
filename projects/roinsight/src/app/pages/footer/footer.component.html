@@ -1,0 +1,115 @@
+<aside class="ms-footbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 ms-footer-col">
+        <div class="ms-footbar-block">
+          <h3 class="ms-footbar-title">Sitemap</h3>
+          <ul class="list-unstyled ms-icon-list three_cols">
+            <li>
+              <a href="index.html"><i class="zmdi zmdi-home"></i> Home</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ms-footbar-block">
+          <h3 class="ms-footbar-title">Subscribe</h3>
+        </div>
+      </div>
+
+      <!-- <mat-card class="col-lg-5 col-md-7 ms-footer-col ms-footer-alt-color example-card">
+            <mat-card-header>
+              <mat-card-title>Subscribe</mat-card-title>
+              <mat-card-subtitle>Stay up-to-date on the latest industry trends, news, and insights with our monthly newsletter. 
+                As a subscriber, you'll receive exclusive content and insider tips on how to optimize your revenue 
+                management strategy. Don't miss out on this valuable resource – sign up today!
+
+            </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-actions align="start">
+                <mat-form-field appearance="outline" color="accent" (ngSubmit)="onSubmit()">
+                    <mat-label>Subscribe</mat-label>
+                    <input matInput placeholder="Your email address" [formControl]="email_subscribe">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-error *ngIf="email_subscribe.invalid">{{getErrorMessage()}}</mat-error>
+                  </mat-form-field>
+            </mat-card-actions>
+            <mat-card-actions align="end">
+                <button mat-raised-button color="accent" type="submit" [disabled]="email_subscribe.invalid"> SUBSCRIBE</button>
+            </mat-card-actions>
+          </mat-card> -->
+
+      <div class="col-lg-5 col-md-7 ms-footer-col ms-footer-alt-color">
+        <div class="ms-footbar-block">
+          <h3 class="ms-footbar-title text-center mb-2">Subscribe</h3>
+          <p class="text-center mb-2">
+            Stay up-to-date on the latest industry trends, news, and insights
+            with our monthly newsletter. As a subscriber, you'll receive
+            exclusive content and insider tips on how to optimize your revenue
+            management strategy. Don't miss out on this valuable resource – sign
+            up today!
+          </p>
+
+          <div class="row">
+            <div class="col-md-8">
+              <mat-form-field appearance="outline" color="accent" (ngSubmit)="onSubmit()" class="full-width align-self-center">
+                <mat-label>Subscribe</mat-label>
+                <input matInput placeholder="Your email address" [formControl]="email_subscribe" />
+                <mat-icon matSuffix>email</mat-icon>
+                <mat-error *ngIf="email_subscribe.invalid">{{
+                  getErrorMessage()
+                  }}</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4 align-self-center">
+              <button mat-raised-button color="accent" type="submit" [disabled]="email_subscribe.invalid">
+                SUBSCRIBE
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-5 ms-footer-col ms-footer-text-right">
+        <div class="ms-footbar-block">
+          <div class="ms-footbar-title">
+            <h3 class="no-m ms-site-title">ROI<span>nsight</span></h3>
+          </div>
+          <address class="no-mb">
+            <p>
+              <fa-icon class="color-info-light" icon="map-location-dot"></fa-icon>
+              {{ address }}
+            </p>
+            <p>
+              <fa-icon class="color-warning-light" icon="envelope"></fa-icon>
+              <a [href]="'mailto:' + email"> {{ email }}</a>
+            </p>
+            <p>
+              <fa-icon class="color-royal-light" icon="phone"></fa-icon>
+              {{ phone }}
+            </p>
+          </address>
+        </div>
+        <div class="ms-footbar-block">
+          <h3 class="ms-footbar-title">Social Media</h3>
+          <div class="ms-footbar-social">
+            <a href="javascript:void(0)" class="btn-circle btn-facebook">
+              <fa-icon [icon]="['fab', 'facebook']"></fa-icon></a>
+            <a href="javascript:void(0)" class="btn-circle btn-twitter">
+              <fa-icon [icon]="['fab', 'twitter']"></fa-icon></a>
+            <a href="javascript:void(0)" class="btn-circle btn-youtube">
+              <fa-icon [icon]="['fab', 'youtube']"></fa-icon></a><br />
+            <a href="javascript:void(0)" class="btn-circle btn-instagram"><fa-icon
+                [icon]="['fab', 'instagram']"></fa-icon></a>
+            <a href="javascript:void(0)" class="btn-circle btn-github">
+              <fa-icon [icon]="['fab', 'github']"></fa-icon></a>
+            <a href="javascript:void(0)" class="btn-circle btn-facebook">
+              <fa-icon [icon]="['fab', 'linkedin']"></fa-icon></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+<footer class="ms-footer">
+  <div class="container">
+    <p>Copyright &copy; ROInsight.com</p>
+  </div>
+</footer>

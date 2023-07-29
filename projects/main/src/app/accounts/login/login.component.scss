@@ -1,0 +1,15 @@
+@import '../accounts.component.scss';
+
+.icon-flex {
+    // color: mat-get($warning-colors);
+    display: flex; 
+    align-items: center;
+}
+.icon-flex .warn{
+    color: red;
+}
+
+.progress-bar-container {
+    height: 20px;
+    overflow: hidden;
+  }

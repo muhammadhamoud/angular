@@ -1,0 +1,56 @@
+@import '../../../styles-variables';
+
+
+mat-card {
+  margin: 0 0 20px 0;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 250px;
+  cursor: pointer;
+
+  mat-card-title {
+    position: relative;
+    // padding-bottom: 20px;
+
+    code {
+      position: absolute;
+      top: 11px;
+      right: 0;
+      float: right;
+      font-size: 10px;
+    }
+    mat-icon {
+      display: inline-flex;
+      // vertical-align: top;
+      font-size: 20px;
+    }
+    mat-card-content {
+      text-align: justify;
+    }
+  }
+
+  // mat-card-subtitle {
+  //   min-height: 60px;
+  // }
+
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    mat-card-subtitle {
+      min-height: auto;
+    }
+  }
+
+  a {
+    fa-icon {
+      position: relative;
+      bottom: 2px;
+      font-size: 16px;
+      margin: 6px;
+    }
+  }
+
+  a[mat-icon-button] {
+    position: relative;
+    left: 5px;
+  }
+}
+

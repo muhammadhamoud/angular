@@ -1,0 +1,61 @@
+.roi-help-support {
+  width: 75%;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.roi-help-support ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 18px 0;
+}
+
+.roi-help-support ul li {
+  text-align: center;
+  flex: 0 1 200px;
+  -moz-box-flex: 0;
+}
+
+.roi-help-support ul li a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.roi-help-support ul li a:hover {
+  text-decoration: underline;
+}
+
+.roi-help-support ul li a img {
+  display: block;
+  margin: 10px auto;
+  width: 50px;
+  height: 50px;
+}
+
+.roi-help-support-description {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 884px) {
+  .roi-help-support {
+    padding-bottom: 20px;
+  }
+  .roi-help-support ul {
+    display: block;
+  }
+
+  .roi-help-support ul li a {
+    display: flex;
+    align-items: center;
+  }
+  .roi-help-support ul li a img {
+    margin: 10px;
+
+  }
+  .roi-help-support-description {
+    display: none;
+  }
+}

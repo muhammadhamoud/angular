@@ -1,0 +1,142 @@
+@import '../../../../styles-variables';
+
+.example-card {
+  max-width: 400px;
+}
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+.branding {
+  cursor: pointer;
+  overflow: hidden;
+  padding-top: 4px;
+  text-overflow: ellipsis;
+
+  &.center {
+    text-align: center;
+  }
+
+  img {
+    position: relative;
+    top: -2px;
+    width: 48px;
+    height: 37.5px;
+  }
+}
+
+.header_main {
+  h1 {
+    text-align: left;
+    font-weight: bolder;
+    font-size: 3rem;
+    line-height: 3.75rem;
+    // text-shadow: 2px 4px 4px rgba(70, 70, 71, 0.6);
+    // text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    // line-height: 1.625rem;
+    text-align: justify;
+  }
+}
+
+.background {
+  padding: 80px 0 0 0;
+  position: relative;
+
+  .actions {
+    text-align: center;
+    margin: 50px;
+    z-index: 1;
+
+    span {
+      display: inline-block;
+      font-weight: bold;
+      padding: 20px 10px 30px 10px;
+    }
+
+    a {
+      margin: 0 5px 10px 0;
+
+      &.actions-main {
+        text-transform: uppercase;
+        padding: 3px 24px;
+      }
+
+      fa-icon {
+        position: relative;
+        bottom: 1px;
+      }
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url('../../../../assets/intro.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    opacity: 0.7;
+    content: '';
+    z-index: 0;
+  }
+
+  .gradient {
+    &::before {
+      position: absolute;
+      top: 51%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      content: '';
+      z-index: 0;
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+}
+
+@media (max-width: map-get($grid-breakpoints, md)) {
+  .background {
+    .actions {
+      margin: 50px 0;
+    }
+  }
+}
+
+@media (max-width: map-get($grid-breakpoints, sm)) {
+  .background {
+    padding: 40px 0 0 0;
+
+    h1 {
+      line-height: 1em;
+    }
+
+    .actions {
+      margin: 40px 0 0 0;
+
+      span {
+        padding: 10px 0 20px 0;
+      }
+
+      a {
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+
+
+
+@import 'checkstyle'

@@ -1,0 +1,102 @@
+<div class="container">
+    <h3>Add Property</h3>
+    <form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>Code</mat-label>
+            <input matInput formControlName="code">
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>Legal Owner</mat-label>
+            <input matInput formControlName="legalOwner">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+       
+        <mat-form-field>
+            <mat-label>Property Type</mat-label>
+            <mat-select formControlName="propertyType">
+                <mat-option *ngFor="let type of propertyTypes" [value]="type.code">{{type.code}}</mat-option>
+            </mat-select>
+           <mat-icon mat-button (click)="openDialog()" matSuffix>add</mat-icon>
+            </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>Number of Floors</mat-label>
+            <input type="number" matInput formControlName="numberOfFloors">
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>Total Rooms</mat-label>
+            <input type="number" matInput formControlName="totalRooms">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>Number of Beds</mat-label>
+            <input type="number" matInput formControlName="numberOfBeds">
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>Property Information URL</mat-label>
+            <input matInput formControlName="propertyInformationUrl">
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>Check-out Time</mat-label>
+            <input type="time" matInput formControlName="checkOutTime">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>Check-in Time</mat-label>
+            <input type="time" matInput formControlName="checkInTime">
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>Latitude</mat-label>
+            <input type="number" matInput formControlName="latitude">
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>Longitude</mat-label>
+            <input type="number" matInput formControlName="longitude">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field>
+          <mat-label>Base Language</mat-label>
+          <input matInput formControlName="baseLanguage">
+        </mat-form-field>
+      </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+      </div>
+    </div>
+  </form>
+  </div>
+

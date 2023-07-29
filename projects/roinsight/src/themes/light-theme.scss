@@ -1,0 +1,16 @@
+@use '@angular/material' as mat;
+@import 'typography';
+
+$ROI-light-primary: mat.define-palette(mat.$grey-palette, 200, 500, 300);
+$ROI-light-accent: mat.define-palette(mat.$brown-palette, 200);
+$ROI-light-warn: mat.define-palette(mat.$deep-orange-palette, 200);
+
+$ROI-light-theme: mat.define-light-theme((
+  color: (
+    primary: $ROI-light-primary,
+    accent: $ROI-light-accent,
+    warn: $ROI-light-warn,
+  ),
+  typography: mat.define-typography-config($ROI-fonts),
+  // density: 0,
+ ));

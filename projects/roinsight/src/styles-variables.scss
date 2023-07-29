@@ -1,0 +1,28 @@
+@use '@angular/material' as mat;
+
+$toolbar-breakpoint: 600px;
+
+$fa-font-path: '~@fortawesome/fontawesome-free-webfonts/webfonts';
+
+$link-hover-decoration: none;
+$label-margin-bottom: 0;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$success-colors: mat.define-palette(mat.$green-palette, 400);
+$warning-colors: mat.define-palette(mat.$amber-palette, 400);
+
+$ROI-custom-colors: (
+  primary: #4b6e8f,
+  secondary: #6c757d,
+  success: #28a745,
+  warning: #ffc107,
+  danger: #dc3545,
+  indego: #9c27b0,
+)

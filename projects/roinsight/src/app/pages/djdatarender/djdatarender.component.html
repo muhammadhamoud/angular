@@ -1,0 +1,27 @@
+<p>djdatarender works!</p>
+<span *ngIf="language$ | async as language">
+    <!-- <mat-form-field> -->
+      <mat-select [ngModel]="language" (selectionChange)="onLanguageSelect($event)">
+        <mat-option *ngFor="let l of languages" [value]="l">
+          {{ l.toUpperCase() }}
+        </mat-option>
+      </mat-select>
+    </span>
+  
+  <div *ngFor="let translation of contents | async">
+  <div class="text-center">
+    {{translation.id}}
+    {{translation.language}}
+    {{translation.title}}
+    {{translation.content}}
+    {{translation.description}}
+    {{translation.image_url}}
+    {{translation.icon_name}}
+    {{translation.is_published}}
+    {{translation.date_created}}
+    {{translation.date_updated}}
+    {{translation.slug}}
+    {{translation.page_name.name}}
+    {{translation.site.name}}
+  </div>
+  </div>

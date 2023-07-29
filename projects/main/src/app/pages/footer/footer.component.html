@@ -1,0 +1,84 @@
+<aside class="ms-footbar">
+  <footer class="text-center text-lg-start">
+    <section class="border-bottom"></section>
+    <section class="border-bottom">
+      <div class="container text-center text-md-start mt-5">
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">Subscribe</h6>
+            <p>
+              Stay up-to-date on the latest industry trends, news, and insights with our newsletter.
+            </p>
+            <mat-form-field appearance="outline" color="accent" (ngSubmit)="onSubmit()"
+              class="full-width align-self-center">
+              <mat-label>Subscribe</mat-label>
+              <input matInput placeholder="Your email address" [formControl]="email_subscribe" />
+              <mat-icon matSuffix>email</mat-icon>
+              <mat-error *ngIf="email_subscribe.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <div>
+              <button mat-raised-button color="accent" type="submit" [disabled]="email_subscribe.invalid">
+                SUBSCRIBE
+              </button>
+            </div>
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Angular</a>
+            </p>
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p *ngFor="let item of navigations">
+              <a mat-button class="nav-button" [routerLink]="[item.link]" routerLinkActive="active" href="#!"
+                class="text-reset"> {{ item.label | translate }}
+              </a>
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              Contact
+            </h6>
+            <div class="link-style">
+              <p><mat-icon class="me-3">home</mat-icon>Dubai, DIFC, UAE</p>
+              <a class="link-style" href="mailto:info@roinsight.com?subject=Inquiry%20About%20Your%20Services">
+                <p><mat-icon class="me-3">email</mat-icon>Contact Us</p>
+              </a>
+              <p><mat-icon class="me-3">phone</mat-icon>+971-503250175</p>
+              <p><mat-icon class="me-3">phone</mat-icon>+974-66114731</p>
+              <a class="link-style" href="#">
+                <p><mat-icon class="me-3">help</mat-icon>Help</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="text-center p-4">
+        <p class="link-style">©2008-{{ year }} Powered by <strong>ROI Technology</strong>, Inc. All rights reserved.</p>
+        <a class="link-style" [routerLink]="['legal', 'privacy']">Privacy</a>
+        <a class="link-style" [routerLink]="['legal', 'terms']">Terms</a>
+        <a class="link-style" href="#">Career</a>
+        <a class="link-style" href="#">English</a>
+      </div>
+    </section>
+    <section class="d-flex justify-content-center p-4 border-bottom">
+      <div class="me-2 py-2 d-none d-lg-block">
+        <span>Follow us</span>
+      </div>
+      <div *ngFor="let social of socialmedia">
+        <a mat-mini-fab matTooltip="{{social.name}}" color="secondary" aria-label="social.name" href="{{ social.link }}"
+          target="_blank">
+          <fa-icon [icon]="social.icons"></fa-icon>
+        </a>
+      </div>
+    </section>
+  </footer>
+</aside>

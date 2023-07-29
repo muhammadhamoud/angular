@@ -1,0 +1,6 @@
+<div class="container">
+    <div [innerHTML]="htmlContent"
+    class="markdown-container" 
+    [class.rtl]="(language$ | async) === 'ar'" 
+></div>
+</div>

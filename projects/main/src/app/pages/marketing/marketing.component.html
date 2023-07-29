@@ -1,0 +1,108 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 rtl class="main-heading">{{ "ROI.services.title" | translate }}</h1>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col-md-6 col-lg-12"
+  *ngFor="let market of marketing; let i = index"
+  [ngClass]="routeAnimationsElements"
+  >
+  <mat-card class="example-card">
+    
+    <mat-card-header>
+      <!-- <img mat-card-avatar>	 -->
+      <mat-card-title-group>
+        <mat-card-title>{{ market.name | translate }}</mat-card-title>
+        <mat-card-subtitle>subtitle</mat-card-subtitle>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content class="item">
+      <p>
+        {{ market.description | translate }}
+      </p>
+      <img mat-card-image class="item_right" src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Ok</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+    <mat-card-footer></mat-card-footer>
+  </mat-card>
+</div>
+</div>
+
+
+  <div class="row" >
+    <div class="col-md-6 col-lg-12"
+      *ngFor="let market of marketing; let i = index"
+      [ngClass]="routeAnimationsElements"
+    >
+      <mat-card class="example-card">
+        <mat-card-header>
+          <!-- <div mat-card-avatar class="example-header-image"></div> -->
+          <mat-card-title>{{ market.name | translate }}</mat-card-title>
+          <mat-card-subtitle
+            >ROInsiht card subtitle another test
+            </mat-card-subtitle>
+        </mat-card-header>
+        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+
+        <mat-card-content class="item">
+          <div>
+            <p>{{ market.description | translate }}</p>
+          </div>
+          <div> 
+          <!-- <div class="item_right">  -->
+            <!-- <div *ngIf="i === 0"><ROI-number-card></ROI-number-card></div>
+            <div *ngIf="i === 1"><ROI-bans></ROI-bans></div>
+            <div *ngIf="i === 2"><ROI-gauge-chart></ROI-gauge-chart></div>
+            <div *ngIf="i === 3"><ROI-line-chart></ROI-line-chart></div>
+            <div *ngIf="i === 4"><ROI-advanced-pie-chart></ROI-advanced-pie-chart></div>
+            <div *ngIf="i === 5"><ROI-pie-grid></ROI-pie-grid></div> -->
+            <!-- <button mat-button>LINK</button> -->
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="row">
+  <div class="col-md-6 col-lg-12">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <img mat-card-avatar>	
+      <mat-card-title-group>
+        <mat-card-title>title</mat-card-title>
+        <mat-card-subtitle>subtitle</mat-card-subtitle>
+        <img mat-card-lg-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+        <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+        <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+      </mat-card-title-group>
+
+    </mat-card-header>
+    <mat-card-content class="item">
+      <img mat-card-image>	
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+      <img mat-card-image class="item_right" src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Ok</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+    <mat-card-footer></mat-card-footer>
+  </mat-card>
+</div>
+</div> -->

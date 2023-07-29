@@ -1,0 +1,27 @@
+@import '../../../styles-variables';
+
+.ms-footbar {
+  // background-color: map-get($ROI-custom-colors, secondary);
+  position: relative;
+  margin-top: 40px;
+  margin-top: 4rem;
+  margin-bottom: 40px;
+}
+
+.link-style {
+  text-decoration: none; /* Remove underline */
+  margin-right: 20px; /* Add space between links */
+  display: inline-block;
+}
+
+.link-style p {
+  display: flex;
+  align-items: center;
+}
+
+  // /* Remove dots from the list */
+  // ul.list-unstyled {
+  //   list-style-type: none;
+  //   justify-content: space-evenly;
+  //   // padding-left: 0;
+  // }

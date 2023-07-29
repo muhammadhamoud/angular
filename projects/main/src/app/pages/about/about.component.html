@@ -1,0 +1,36 @@
+<div class="container" >
+    <div class="row">
+      <div class="col-md-12">
+        <h1 rtl class="main-heading" [class.rtl]="(language$ | async) === 'ar'"> {{'ROI.menu.about' | translate }}</h1>
+      </div>
+    </div>
+    <div class="row" [ngClass]="routeAnimationsElements">
+      <!-- innerHTML -->
+      <div 
+        class="markdown-container" 
+        [class.rtl]="(language$ | async) === 'ar'" 
+        markdown [src]="markdownfile" 
+        (load)="onLoad($event)" 
+        (error)="onError($event)"
+        >
+      </div>
+    </div>
+</div>
+
+
+<!-- Exeuctive Team Members
+Meet the team
+Life at ROInsight
+Human Resource
+Career Blog
+Test Skills
+Schedule Interview
+Job Openings
+We are Global
+United Arab Emirates
+Qatar
+Suadi Arabia
+United State of America
+Google Reviews -->
+
+

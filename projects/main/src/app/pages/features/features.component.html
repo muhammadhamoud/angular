@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 rtl class="main-heading" [class.rtl]="(language$ | async) === 'ar'">{{ 'ROI.features.title' | translate }}</h1>
+      </div>
+    </div>
+    <div class="row"> 
+      <div *ngFor="let ourservice of ourservices" class="col-md-6 col-lg-4" [ngClass]="routeAnimationsElements">
+        <mat-card [routerLink]="[ourservice.link]" matRipple>
+          <mat-card-header>
+            <!-- <img mat-card-avatar>	 -->
+            <mat-card-title>
+              <mat-icon aria-hidden="false" aria-label="icon" fontIcon="{{ourservice.icons}}"></mat-icon>
+                  {{ourservice.name | translate}}
+              <code *ngIf="ourservice.documentation">{{ourservice.documentation}}</code>
+            </mat-card-title>
+            <mat-card-subtitle rtl>
+              .
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content class="box_text">
+            {{ ourservice.description | translate }}
+          </mat-card-content>
+          <!-- <img mat-card-image>  -->
+      </mat-card>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- <mat-card-actions> -->
+    <!-- <a *ngIf="ourservice.github" mat-icon-button [href]="ourservice.github" rel="noopener noreferrer" target="_blank">
+      <fa-icon [icon]="['fab','github']"></fa-icon>
+    </a>
+    <a mat-button [href]="ourservice.documentation" rel="noopener noreferrer" target="_blank">
+      <fa-icon icon="book"></fa-icon>{{ 'ROI.features.documentation' | translate }}
+    </a>
+    <a *ngIf="ourservice.medium" mat-button [href]="ourservice.medium" rel="noopener noreferrer" target="_blank">
+      <fa-icon [icon]="['fab','medium-m']"></fa-icon>{{ 'ROI.features.guide' | translate }}
+    </a> -->
+  <!-- </mat-card-actions> -->
+  
+        <!-- <mat-card-footer>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </mat-card-footer> -->

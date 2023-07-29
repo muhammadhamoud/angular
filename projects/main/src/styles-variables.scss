@@ -1,0 +1,92 @@
+@use '@angular/material' as mat;
+
+$toolbar-breakpoint: 600px;
+
+$fa-font-path: '~@fortawesome/fontawesome-free-webfonts/webfonts';
+
+$link-hover-decoration: none;
+$label-margin-bottom: 0;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$success-colors: mat.define-palette(mat.$green-palette, 400);
+$warning-colors: mat.define-palette(mat.$amber-palette, 400);
+
+$ROI-custom-colors: (
+  primary: #4b6e8f,
+  secondary: #6c757d,
+  success: #28a745,
+  warning: #ffc107,
+  danger: #dc3545,
+  indego: #9c27b0,
+);
+
+// mat-card {
+//   margin: 0 0 20px 0;
+//   box-sizing: border-box;
+//   padding: 10px;
+//   height: 250px;
+//   cursor: pointer;
+
+//   mat-card-title {
+//     position: relative;
+//     padding-bottom: 20px;
+
+//     mat-icon {
+//       display: inline-flex;
+//       // vertical-align: top;
+//       font-size: 20px;
+//     }
+//     mat-card-content {
+//       text-align: justify;
+//       font-weight: 500;
+//     }
+//   }
+// }
+
+
+.main-heading {
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  padding-top: 20px;
+}
+.main-heading.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.box_text {
+  text-align: justify;
+  font-weight: 500;
+}
+
+.markdown-container {
+  font-size: 14px;
+  line-height: 1.5;
+  // margin: 20px;
+}
+  .markdown-container h1 {
+  font-size: 45px;
+  font-weight: bold;
+}
+  .markdown-container h2 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.markdown-container p, li {
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-align: justify;
+}
+
+.markdown-container.rtl {
+  direction: rtl;
+  text-align: right;
+}

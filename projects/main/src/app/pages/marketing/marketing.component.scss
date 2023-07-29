@@ -1,0 +1,77 @@
+@import '../../../styles-variables';
+
+
+// .card-content {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+
+// .card-container {
+//   /*  not needed styles to reflect it */
+//   padding: 10px;
+//   // color: white;
+//   width: 50%;
+//   padding: 12px;
+//   display: inline-block;
+//   /* needed styles below */
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+// .example-card {
+//   // max-width: 50%;
+// }
+
+// .example-header-image {
+//   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+//   background-size: cover;
+// }
+
+mat-card {
+  margin: 0 0 20px 0;
+
+  mat-card-title {
+    position: relative;
+  }
+  mat-card-subtitle {
+    min-height: 60px;
+  }
+
+  mat-card-content {
+    display: flex;
+    // justify-content: space-between;
+
+    /* Each column will be 33% of the container width */
+    .item {
+      height: 100%;
+      align-self: stretch; 
+      text-align: justify;
+      padding-right: 1%;
+      justify-content: center;
+      margin: 0;
+      // flex: 0 0 33%; /* Each item will have its natural width */
+    }
+    .item_right {
+      flex: 1; /* The last item will fill the remaining space */
+      max-width: 61%;
+    }
+    p {
+      padding-right: 10px;
+    }
+    img {
+      border-radius: 1%;
+    }
+  }
+
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    mat-card-subtitle {
+      min-height: auto;
+    }
+    mat-card-content {
+    // text-align: center;
+    display: block;
+    // justify-content: space-between;
+  }
+  }
+}

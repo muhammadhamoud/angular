@@ -1,0 +1,51 @@
+<header class="ms-hero-page ms-hero-img-keyboard ms-hero-bg-dark text-light">
+    <div class="container">
+      <div class="row align-items-center" [ngClass]="routeAnimationsElements">
+        <div class="col-lg-7">
+          <h1>
+            {{ 'ROI.title.long' | translate }}
+          </h1>
+          <p class="lead">
+            {{ 'ROI.landing.header_main' | translate }}
+          </p>
+            <div
+            class="justify-content-sm-center justify-content-xl-start d-grid gap-3 d-sm-flex "
+          >
+            <a
+              mat-raised-button
+              class="actions-main"
+              color="accent"
+              routerLink="../feature-list"
+            >
+              {{ 'ROI.menu.features' | translate }}
+            </a>
+          </div>
+          <!-- <ul class="ms-list-arrow">
+            <li>Fugit officiis iure ullam tenetur earum magnam repellat.</li>
+            <li>Repellat placeat quisquam dignissimos laboriosam.</li>
+            <li>Obcaecati necessitatibus sapiente adipisci dolore.</li>
+            <li>Blanditiis tempora perspiciatis architecto voluptates.</li>
+          </ul> -->
+        </div>
+        <div class="text-center mt-4 col-xl-5 col-xxl-6 d-none d-xl-block">
+          <img class="img-fluid rounded-3 my-5 index-1" [src]="image1" />
+        </div>
+        <div class="col-lg-12 gy-5">
+          <div class="text-center text-light pb-3">Are you looking to streamline your data analysis process and improve your decision-making? Look no further than</div>
+          <div class="text-center text-light rotate_icons">
+              <div class="btn_icons"><h1><fa-icon [icon]="['fab','python']"></fa-icon></h1><strong>Python</strong></div>
+              <div class="btn_icons"><h1><fa-icon [icon]="['fab','r-project']"></fa-icon></h1><strong>R</strong></div>
+              <!-- <div class="btn"><h3><img [src]="python" height="45"></h3><strong>Python</strong></div> -->
+              <!-- <div class="btn"><h3><img [src]="r" height="45"></h3><strong>R</strong></div> -->
+              <div class="btn_icons"><h1><fa-icon icon="database"></fa-icon></h1><strong>SQL</strong></div>
+              <div class="btn_icons"><h1><fa-icon [icon]="['fab','js']"></fa-icon></h1><strong>JavaScript</strong></div>
+              <div class="btn_icons"><h1><fa-icon [icon]="['fab','git']"></fa-icon></h1><strong>Git/Github</strong></div>
+              <div class="btn_icons"><h1><fa-icon [icon]="['fab','angular']"></fa-icon></h1><strong>Angular</strong></div>
+              <div class="btn_icons"><h3><img [src]="tableau" height="45"></h3><strong>Tableau</strong></div>
+              <div class="btn_icons"><h3><img [src]="powerbi" height="45"></h3><strong>Power BI</strong></div>
+              <div class="btn_icons"><h3><img [src]="excel" height="45"></h3><strong>Excel</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
