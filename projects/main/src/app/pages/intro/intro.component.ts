@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ROUTE_ANIMATIONS_ELEMENTS } from '../../core/core.module';
 import { FeatureItems } from '../data/features.data';
-
+import { ProductItems } from '../data/products.data';
+import { OurServiceItems } from '../data/ourservices.data';
 
 @Component({
   selector: 'ROI-intro',
@@ -25,6 +26,8 @@ export class IntroComponent {
 
   constructor (
     public featureitems: FeatureItems,
+    public ourservicesitems: OurServiceItems,
+    public productitems: ProductItems
   ) {}
 
 

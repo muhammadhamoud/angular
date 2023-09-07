@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ROUTE_ANIMATIONS_ELEMENTS } from '../../core/core.module';
-import { ourservices, OurServices } from '../data/ourservices.data';
+import { OurServiceItems } from '../data/ourservices.data';
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import {
@@ -16,10 +16,11 @@ import {
 })
 export class FeaturesComponent implements OnInit {
   routeAnimationsElements = ROUTE_ANIMATIONS_ELEMENTS;
-  ourservices: OurServices[] = ourservices;
+  // ourservices: OurServices[] = ourservices;
   language$: Observable<string> | undefined;
   constructor(
     private store: Store<AppState>,
+    public ourservices: OurServiceItems
   ) {
     // this.updateMarkdownFile();
   }

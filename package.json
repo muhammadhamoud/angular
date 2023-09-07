@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"npm run server\" \"ng serve main\"",
+    "start": "concurrently \"npm run server\" \"ng serve eco\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "server": "ts-node ./projects/server/server.ts"
+    "server": "ts-node ../server/servers.ts"
   },
   "private": true,
   "dependencies": {
@@ -35,6 +35,7 @@
     "bootstrap": "^5.3.0",
     "browser-detect": "^0.2.28",
     "d3": "^7.8.5",
+    "faker": "^6.6.6",
     "markdown": "^0.5.0",
     "ng-zorro-antd": "^16.1.0",
     "ngx-markdown": "^16.0.0",
@@ -54,6 +55,7 @@
     "@types/d3-selection": "^3.0.5",
     "@types/d3-shape": "^3.1.1",
     "@types/jasmine": "~4.3.0",
+    "@types/json-server": "^0.14.4",
     "@types/uuid": "^9.0.2",
     "concurrently": "^8.2.0",
     "jasmine-core": "~4.6.0",

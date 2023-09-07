@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AccountsComponent } from './accounts.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   // {
@@ -13,13 +14,19 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
-    data: { title: 'ROI.menu.accounts' }
+    data: { title: 'ROI.menu.login' }
   }
   ,
   {
     path: 'singnup',
     component: SignupComponent,
-    data: { title: 'ROI.menu.accounts' }
+    data: { title: 'ROI.menu.signup' }
+  }
+  ,
+  {
+    path: 'profile',
+    component: ProfileComponent,
+    data: { title: 'ROI.menu.profile' }
   }
 ];
 

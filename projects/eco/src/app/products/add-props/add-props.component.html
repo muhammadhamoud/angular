@@ -1,0 +1,142 @@
+
+<div class="container">
+  <h2>Add Properties</h2>
+  <mat-form-field>
+    <mat-label>Add Property</mat-label>
+    <mat-select #prop (selectionChange)="change()">
+      <mat-option *ngFor="let prop of propOptions" [value]="prop">{{ prop }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div *ngIf="prop.value == 'category'">
+    <form [formGroup]="categoryForm" (ngSubmit)="addCategory()">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput type="text" formControlName="name">
+      </mat-form-field>
+      <button mat-button type="submit">Add category</button>
+    </form>
+  </div>
+  <div *ngIf="prop.value == 'attribute'">
+    <form [formGroup]="attributeForm" (ngSubmit)="addAttribute(categoryForAttr.value)">
+      <mat-form-field>
+        <mat-label>Category</mat-label>
+        <mat-select #categoryForAttr>
+          <mat-option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput type="text" formControlName="name">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput type="text" formControlName="desc">
+      </mat-form-field>
+      <button mat-button (click)="addChild()">Add Child</button>
+      <div *ngFor="let child of addedChilds; let i = index" class="child-container">
+        <mat-form-field>
+          <mat-label>Key</mat-label>
+          <input matInput type="text" [(ngModel)]="child.key" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput type="text" [(ngModel)]="child.name" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <button mat-button (click)="removeChild(i)">Remove</button>
+      </div>
+      <button mat-button type="submit">Add attribute</button>
+    </form>
+  </div>
+  <div *ngIf="prop.value == 'tag'">
+    <form [formGroup]="tagForm" (ngSubmit)="addTag(categoryForTag.value)">
+      <mat-form-field>
+        <mat-label>Category</mat-label>
+        <mat-select #categoryForTag>
+          <mat-option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput type="text" formControlName="name">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput type="text" formControlName="desc">
+      </mat-form-field>
+      <button mat-button type="submit">Add tag</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- 
+
+<div class="container">
+<h2>Add</h2>
+
+<select #prop (change)="change()">
+  <option *ngFor="let prop of propOptions" [value]="prop">{{prop}}</option>
+</select>
+<div *ngIf="prop.value == 'category'">
+  <form class="ui form" [formGroup]="categoryForm" (submit)="addCategory()">
+    <div class="field">
+      <label>Name</label>
+      <input type="text" name="name" formControlName="name">
+    </div>
+    <button class="ui button" type="submit">Add category</button>
+  </form>
+</div>
+<div *ngIf="prop.value == 'attribute'">
+  <form class="ui form" [formGroup]="attributeForm" (submit)="addAttribute(categoryForAttr.value)">
+    <div class="field">
+      <label>Category</label>
+      <select #categoryForAttr>
+        <option *ngFor="let category of categories" value="{{category.id}}" >{{category.name}}</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Name</label>
+      <input type="text" formControlName="name">
+    </div>
+    <div class="field">
+      <label>Description</label>
+      <input type="text" formControlName="desc">
+    </div>
+    <div class="field">
+      <label>Childs</label>
+      <input type="button" (click)="addChild()" value="+">
+      <div *ngFor="let child of addedChilds; let i = index">
+        <div class="field">
+          <label>Key</label>
+          <input type="text" [(ngModel)]="child.key" [ngModelOptions]="{standalone: true}">
+        </div> 
+        <div class="field">
+          <label>Name</label>
+          <input type="text" [(ngModel)]="child.name" [ngModelOptions]="{standalone: true}">
+        </div>  
+        <button (click)="removeChild(i)">-</button>
+      </div>
+    </div>
+    <button class="ui button" type="submit">Add attribute</button>
+  </form>
+</div>
+<div *ngIf="prop.value == 'tag'">
+  <form class="ui form" [formGroup]="tagForm" (submit)="addTag(categoryForTag.value)">
+    <div class="field">
+      <label>Category</label>
+      <select #categoryForTag>
+        <option *ngFor="let category of categories" value="{{category.id}}" >{{category.name}}</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Name</label>
+      <input type="text" formControlName="name">
+    </div>
+    <div class="field">
+      <label>Description</label>
+      <input type="text" formControlName="desc">
+    </div>
+    <button class="ui button" type="submit">Add tag</button>
+  </form>
+</div>
+</div> -->

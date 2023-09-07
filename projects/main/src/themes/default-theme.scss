@@ -39,12 +39,8 @@ $ROI-palette: (
 );
 
 $ROI-primary: mat.define-palette($ROI-palette, 800, 300, 900);
-
 $ROI-accent: mat.define-palette(mat.$amber-palette, 500);
 $ROI-warn: mat.define-palette(mat.$pink-palette, 600);
-
-
-
 $ROI-theme: mat.define-light-theme((
  color: (
    primary: $ROI-primary,

@@ -114,6 +114,7 @@ export class Carousel implements AfterContentInit {
     this.items.forEach((item: CarouselItem) => {
       if (this._keyManager != null) {
         item.tabindex = item === this._keyManager.activeItem ? '0' : '-1';
+        
       }
     });
   }

@@ -61,7 +61,7 @@ const packageJson = {
 
 export const environment = {
   appName: 'roinsight',
-  api_url: 'http://127.0.0.1:3000/',
+  api_url: 'http://localhost:3000/',
   envName: 'DEV',
   production: false,
   test: false,

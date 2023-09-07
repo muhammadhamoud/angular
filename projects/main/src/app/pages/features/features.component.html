@@ -5,7 +5,7 @@
       </div>
     </div>
     <div class="row"> 
-      <div *ngFor="let ourservice of ourservices" class="col-md-6 col-lg-4" [ngClass]="routeAnimationsElements">
+      <div *ngFor="let ourservice of ourservices.getAllItems()" class="col-md-6 col-lg-4" [ngClass]="routeAnimationsElements">
         <mat-card [routerLink]="[ourservice.link]" matRipple>
           <mat-card-header>
             <!-- <img mat-card-avatar>	 -->

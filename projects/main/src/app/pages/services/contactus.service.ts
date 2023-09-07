@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,10 +18,20 @@ export class ContactusService {
  
   constructor(private http: HttpClient) { }
 
+  // sendEmail(emailData: any): Observable<any>{
+  //   const apiUrl = 'http://app.roinsight.com/api/send-email';
+  //   // return this.http.post(apiUrl, emailData);
+  //   return this.http.post(apiUrl, JSON.stringify(emailData), this.httpOptions);
+  // }
+
   sendEmail(emailData: any): Observable<any>{
-    const apiUrl = 'http://app.roinsight.com/api/send-email';
-    // return this.http.post(apiUrl, emailData);
-    return this.http.post(apiUrl, JSON.stringify(emailData), this.httpOptions);
+    console.log(emailData)
+    const dummyResponse = {
+      status: 'success',
+      message: 'Email sent successfully!',
+    };
+    return of(dummyResponse);
   }
+
 
 }

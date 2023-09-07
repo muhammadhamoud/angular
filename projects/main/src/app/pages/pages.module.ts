@@ -16,7 +16,9 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { FooterComponent } from './footer/footer.component';
 import { FeaturesComponent } from './features/features.component';
 import { LegalComponent } from './legal/legal.component';
-
+import { ProductsComponent } from './products/products.component';
+import { HerosComponent } from './heros/heros.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,9 @@ import { LegalComponent } from './legal/legal.component';
     // FooterComponent,
     FeaturesComponent,
     LegalComponent,
+    ProductsComponent,
+    HerosComponent,
+    HomepageComponent,
   ],
   imports: [
     CommonModule,

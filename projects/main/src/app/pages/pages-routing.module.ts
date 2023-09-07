@@ -5,6 +5,9 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { FeaturesComponent } from './features/features.component';
 import { TestingComponent } from './testing/testing.component';
 import { LegalComponent } from './legal/legal.component';
+import { ProductsComponent } from './products/products.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 const routes: Routes = [
   {
@@ -16,6 +19,16 @@ const routes: Routes = [
     path: 'about',
     component: AboutusComponent,
     data: { title: 'ROI.menu.about' }
+  },
+  {
+    path: 'contactus',
+    component: ContactusComponent,
+    data: { title: 'ROI.menu.contactus' }
+  },
+  {
+    path: 'products',
+    component: ProductsComponent,
+    data: { title: 'ROI.menu.products' }
   },
   {
     path: 'features',

@@ -1,0 +1,31 @@
+<!-- <h1>Categories</h1>
+<div class="ui cards">
+  <div class="card category" *ngFor="let category of categories" >
+    <div class="content">
+      <div class="header">{{category.name}}</div>
+    </div>
+    <div class="extra content">
+      <div class="ui right floated primary button" (click)="onSelect(category.id)">
+        View products
+        <i class="right chevron icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+ -->
+
+
+<div class="container">
+  <h1>Categories</h1>
+  <mat-card class="category" *ngFor="let category of categories">
+    <mat-card-content>
+      <mat-card-title>{{ category.name }}</mat-card-title>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="onSelect(category.id)">
+        View products
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

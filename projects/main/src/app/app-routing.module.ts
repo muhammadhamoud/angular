@@ -15,7 +15,13 @@ const routes: Routes = [
         (m) => m.PagesModule
       )
   },
-
+  // {
+  //   path: 'ecommerce',
+  //   loadChildren: () =>
+  //     import('./ecommerce/ecommerce.module').then(
+  //       (m) => m.EcommerceModule
+  //     )
+  // },
   {
     path: 'auth',
     loadChildren: () =>

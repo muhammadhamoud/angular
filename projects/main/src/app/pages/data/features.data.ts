@@ -9,6 +9,13 @@ export interface FeatureItem {
 }
 
 const FEATURES = [
+  // {
+  //   id: 'getting-started',
+  //   name: 'ROI.title.long',
+  //   document: 'features_01',
+  //   overview: 'ROI.landing.header_main',
+  //   image: 'assets/content/features/Feature_01_800x600.jpg'
+  // },
   {
     id: 'getting-started',
     name: 'ROI.marketing.name_01',
@@ -22,13 +29,6 @@ const FEATURES = [
     document: 'features_01',
     overview: 'ROI.services.description_02',
     image: 'assets/content/features/Feature_02_800x600.jpg'
-  },
-  {
-    id: 'getting-started',
-    name: 'ROI.marketing.name_03',
-    document: 'assets/markdown/about_',
-    overview: 'ROI.services.description_03',
-    image: 'assets/content/features/Feature_03_800x600.jpg'
   },
   {
     id: 'getting-started',

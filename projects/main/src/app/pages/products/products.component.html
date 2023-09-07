@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 rtl class="main-heading" [class.rtl]="(language$ | async) === 'ar'">{{ 'ROI.services.title' | translate }}</h1>
+      </div>
+    </div>
+    <div class="row"> 
+      <div *ngFor="let product of products" class="col-md-6 col-lg-4" [class.rtl]="(language$ | async) === 'ar'" [ngClass]="routeAnimationsElements">  <!--  -->
+        <mat-card [routerLink]="[product.url]" matRipple>
+          <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>{{product.name | translate}}</mat-card-title>
+            <img mat-card-sm-image src="{{product.image}}" style="height: 50px; width: 50px;">	
+          </mat-card-title-group>
+            <!-- <mat-card-subtitle rtl> -->
+                <!-- {{product.name | translate }} -->
+            <!-- </mat-card-subtitle> -->
+          </mat-card-header>
+          <mat-card-content class="box_text" rtl>
+            <!-- <img mat-card-image src="../../../assets/test/{{product.image}}" height="50">	 -->
+            {{ product.description | translate }}
+          </mat-card-content>
+          <!-- <img mat-card-image>  -->
+      </mat-card>
+      </div>
+    </div>
+  </div>

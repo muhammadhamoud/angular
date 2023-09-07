@@ -1,0 +1,24 @@
+
+<div class="container">
+    <mat-tab-group animationDuration="1000ms" headerPosition="below" dynamicHeight> 
+    <ng-container *ngFor="let feature of featureitems.getAllItems()">
+      <mat-tab label="{{feature.name | translate}}">
+        <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h1>
+            {{feature.name | translate}}
+          </h1>
+          <p>
+            {{feature.overview | translate}}
+          </p>
+        </div>
+        <div class="text-center mt-4 col-xl-4 col-xxl-6 d-none d-xl-block">
+          <img class="img-fluid rounded-3 my-5 index-1" src="{{feature.image}}" height="250px"/>
+        </div>
+      </div>
+    </mat-tab>
+  </ng-container>
+</mat-tab-group>
+</div>  
+
+

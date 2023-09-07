@@ -44,6 +44,11 @@
   "ROI.menu.login": "Sign in",
   "ROI.menu.logout": "Logout",
   "ROI.menu.settings": "Settings",
+  "ROI.menu.products": "Products",
+  "ROI.menu.contactus": "Contact Us",
+  "ROI.view.all": "View all",
+  "ROI.menu.getquote": "Get a Quote",
+  
   "ROI.settings.animations.elements": "Navigation page elements slide up",
   "ROI.settings.animations.page": "Navigation whole page transition",
   "ROI.settings.animations.title": "Animations",
@@ -140,5 +145,32 @@
   "ROI.marketing.name_11": "Customizable and Scalable",
   "ROI.marketing.description_11": "Our business intelligence tool can be tailored to your unique needs and scaled to accommodate your company's growth, ensuring that you always have the insights you need to succeed.",
   "ROI.contactus.subtitle": "We are here to help! If you have any questions, concerns, or inquiries, we encourage you to reach out to us. Please take a moment to fill out the contact form below and provide us with as much detail as possible regarding your query. Our dedicated team is ready to assist you.",
-  "ROI.contactus.title": "Let's Connect and Make Magic Happen!"
+  "ROI.contactus.title": "Let's Connect and Make Magic Happen!",
+
+
+"ROI.product.name.01": "System Integration Services",
+"ROI.product.name.02": "Business Intelligence Tool",
+"ROI.product.name.03": "Advanced Automation Solutions",
+"ROI.product.name.04": "Performance Monitoring Systems",
+"ROI.product.name.05": "Tracking Solutions Systems",
+"ROI.product.name.06": "Data Portability Solutions",
+"ROI.product.name.07": "Real Time Data Base Systems",
+"ROI.product.name.08": "Digital Transformation System",
+"ROI.product.name.09": "Transaction Processing System",
+"ROI.product.name.10": "Management Information System",
+"ROI.product.name.11": "Decision Support System",
+"ROI.product.name.12": "Executive Support System",
+"ROI.product.description.01": "Unlock your business's true potential with our cutting-edge System Integration Services. Seamlessly connect and optimize your IT systems, streamlining workflows and data flow for unparalleled efficiency and productivity. Embrace the power of interconnectedness with SIS.",
+"ROI.product.description.02": "Empower your team with actionable insights using our Business Intelligence Tool. Visualize complex data with ease, make informed decisions, and drive growth. Stay ahead of the competition with BIT's intuitive reports and real-time analytics.",
+"ROI.product.description.03": "Experience the future of automation with our Advanced Automation Solutions. Leverage AI and machine learning to streamline repetitive tasks, increase accuracy, and supercharge your productivity. Embrace the next generation of efficiency with AAS.",
+"ROI.product.description.04": "Never miss a beat with our Performance Monitoring Systems. Monitor and optimize your critical IT infrastructure in real-time, ensuring peak performance and availability. Stay ahead of potential issues with PMS's proactive insights.",
+"ROI.product.description.05": "Track, secure, and optimize your assets effortlessly with our Tracking Solutions Systems. Harness the power of real-time data to enhance logistics, improve security, and maximize resource utilization. Take control of your assets with TSS.",
+"ROI.product.description.06": "Unleash the freedom of data movement with our Data Portability Solutions. Seamlessly transfer your data between platforms without hassle, ensuring data integrity and privacy. Empower your users with DPS's seamless data portability.",
+"ROI.product.description.07": "Stay ahead in a fast-paced world with our Real-Time Database Systems. Access critical information instantly and make informed decisions in real-time. Drive performance and agility with RTDB's lightning-fast data retrieval.",
+"ROI.product.description.08": "Embrace the future of business with our Digital Transformation System. Propel your organization forward by optimizing processes, enhancing customer experiences, and staying ahead of the digital curve. Empower your business with DTS.",
+"ROI.product.description.09": "Efficiency meets reliability with our Transaction Processing System. Handle high volumes of transactions seamlessly and securely, ensuring smooth operations and satisfied customers. Experience unparalleled transactional performance with TPS.",
+"ROI.product.description.10": "Empower your management team with our intuitive Management Information System. Access key insights and performance metrics in a snap, enabling data-driven decision-making and strategic planning. Elevate your management with MIS.",
+"ROI.product.description.11": "Make the right choices every time with our Decision Support System. Analyze complex data, explore multiple scenarios, and unlock valuable insights to guide your decisions confidently. Trust DSS to be your ultimate decision-making companion.",
+"ROI.product.description.12": "Executive decision-making simplified with our Executive Support System. Get high-level reports, real-time updates, and critical KPIs at your fingertips. Stay agile and lead your organization to success with ESS."
+
 }

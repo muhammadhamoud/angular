@@ -1,0 +1,51 @@
+<div class="container">
+  <h2>Add Product</h2>
+  <form [formGroup]="productForm" (ngSubmit)="createProduct()" class="product-form" *ngIf="initializeForm">
+    <ng-container *ngFor="let column of displayedColumns">
+      <mat-form-field>
+        <mat-label>{{ getColumnLabel(column) }}</mat-label>
+        <input matInput [formControlName]="column" required>
+      </mat-form-field>
+    </ng-container>
+    <button mat-raised-button color="primary" type="submit">Create Product</button>
+  </form>
+  <button mat-fab color="primary" class="add-button" (click)="initializeProductForm()">
+    <mat-icon>{{ initializeForm ? 'remove' : 'add' }}</mat-icon>
+  </button>
+  
+  <h2>Product CRUD</h2>
+  <table mat-table [dataSource]="products" class="mat-elevation-z8">
+    <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
+      <th mat-header-cell *matHeaderCellDef> {{ getColumnLabel(column) }} </th>
+      <td mat-cell *matCellDef="let element">
+        <ng-container *ngIf="column === 'actions'">
+          <button mat-button color="primary" (click)="editProduct(element)"
+            *ngIf="selectedProduct !== element">Edit</button>
+          <button mat-raised-button color="primary" (click)="saveProduct(element)"
+            *ngIf="selectedProduct === element">Save</button>
+          <button mat-button color="primary" (click)="cancelEdit()" *ngIf="selectedProduct === element">Cancel</button>
+          <button mat-button color="warn" (click)="deleteProduct(element)"
+            *ngIf="selectedProduct === element">Delete</button>
+        </ng-container>
+        <ng-container *ngIf="column !== 'actions'">
+          <ng-container *ngIf="selectedProduct !== element; else editMode">
+            {{ element[column] }}
+          </ng-container>
+        </ng-container>
+        <ng-template #editMode>
+          <input *ngIf="column !== 'id'" [(ngModel)]="element[column]" [placeholder]="getColumnLabel(column)">
+        </ng-template>
+      </td>
+    </ng-container>
+    <!-- Specify the order of columns in the header row -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+  <div *ngFor="let product of products">
+    <app-product-card [product]="product"></app-product-card>
+    <app-item-quantity [quantity]="quantity" [maxValue]="10" (setQuantityEvent)="setQuantity($event)"></app-item-quantity>
+  </div>
+
+</div>

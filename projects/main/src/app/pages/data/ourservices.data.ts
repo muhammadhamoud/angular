@@ -1,13 +1,18 @@
 
-export interface OurServices {
+import {Injectable} from '@angular/core';
+
+export interface OurServiceItem {
+  id: string;
   name: string;
   description: string;
   documentation: string;
   icons: string;
   link: string;
 }
-export const ourservices: OurServices[] = [
+
+const OURSERVICES = [
   {
+    id: "01",
     name: 'ROI.services.name_01',
     description: 'ROI.services.description_01',
     documentation: '',
@@ -15,6 +20,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "02",
     name: 'ROI.services.name_02',
     description: 'ROI.services.description_02',
     documentation: '',
@@ -22,6 +28,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "03",
     name: 'ROI.services.name_03',
     description: 'ROI.services.description_03',
     documentation: '',
@@ -29,6 +36,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "04",
     name: 'ROI.services.name_04',
     description: 'ROI.services.description_04',
     documentation: '',
@@ -36,6 +44,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "05",
     name: 'ROI.services.name_05',
     description: 'ROI.services.description_05',
     documentation: '',
@@ -43,6 +52,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "06",
     name: 'ROI.services.name_06',
     description: 'ROI.services.description_06',
     documentation: '',
@@ -50,6 +60,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "07",
     name: 'ROI.services.name_07',
     description: 'ROI.services.description_07',
     documentation: '',
@@ -57,6 +68,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "08",
     name: 'ROI.services.name_08',
     description: 'ROI.services.description_08',
     documentation: '',
@@ -64,6 +76,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   // {
+  // id: "09",
   //   name: 'ROI.services.name_09',
   //   description: 'ROI.services.description_09',
   //   documentation: '',
@@ -71,6 +84,7 @@ export const ourservices: OurServices[] = [
   //   link: 'link'
   // },
   {
+    id: "10",
     name: 'ROI.services.name_10',
     description: 'ROI.services.description_10',
     documentation: '',
@@ -78,6 +92,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "11",
     name: 'ROI.services.name_11',
     description: 'ROI.services.description_11',
     documentation: '',
@@ -85,6 +100,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "12",
     name: 'ROI.services.name_12',
     description: 'ROI.services.description_12',
     documentation: '',
@@ -92,6 +108,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "13",
     name: 'ROI.services.name_13',
     description: 'ROI.services.description_13',
     documentation: '',
@@ -99,6 +116,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "14",
     name: 'ROI.services.name_14',
     description: 'ROI.services.description_14',
     documentation: '',
@@ -106,6 +124,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "15",
     name: 'ROI.services.name_15',
     description: 'ROI.services.description_15',
     documentation: '',
@@ -113,6 +132,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "16",
     name: 'ROI.services.name_16',
     description: 'ROI.services.description_16',
     documentation: '',
@@ -120,6 +140,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "17",
     name: 'ROI.services.name_17',
     description: 'ROI.services.description_17',
     documentation: '',
@@ -127,6 +148,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "18",
     name: 'ROI.services.name_18',
     description: 'ROI.services.description_18',
     documentation: '',
@@ -134,6 +156,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "19",
     name: 'ROI.services.name_19',
     description: 'ROI.services.description_19',
     documentation: '',
@@ -141,6 +164,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "20",
     name: 'ROI.services.name_20',
     description: 'ROI.services.description_20',
     documentation: '',
@@ -148,6 +172,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "21",
     name: 'ROI.services.name_21',
     description: 'ROI.services.description_21',
     documentation: '',
@@ -155,6 +180,7 @@ export const ourservices: OurServices[] = [
     link: 'link'
   },
   {
+    id: "22",
     name: 'ROI.services.name_22',
     description: 'ROI.services.description_22',
     documentation: '',
@@ -162,3 +188,15 @@ export const ourservices: OurServices[] = [
     link: 'link'
   }
 ];
+
+@Injectable({providedIn: 'root'})
+export class OurServiceItems {
+
+  getAllItems(): OurServiceItem[] {
+    return OURSERVICES;
+  }
+
+  getItemById(id: string): OurServiceItem | undefined {
+    return OURSERVICES.find(i => i.id === id);
+  }
+}

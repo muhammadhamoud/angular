@@ -47,11 +47,12 @@ export class AppComponent implements OnInit {
     { link: 'home', label: 'ROI.menu.home' },
     { link: 'about', label: 'ROI.menu.about' },
     { link: 'features', label: 'ROI.menu.features' },
-    // { link: 'examples', label: 'ROI.menu.examples' },
+    { link: 'products', label: 'ROI.menu.products' },
+    { link: 'contactus', label: 'ROI.menu.contactus' },
     // { link: 'charts', label: 'Charts' },
     // { link: 'pages', label: 'ROI.menu.pages' },
     // { link: 'auth', label: 'ROI.menu.auth' },
-    { link: 'test', label: 'Test Me' },
+    // { link: 'test', label: 'Test Me' },
   ];
 
   navigationSideMenu = [
